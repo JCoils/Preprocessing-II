@@ -1,1 +1,71 @@
 // Follow the order in the readme
+@import "variables";
+
+@import "mixins";
+
+@import "reset";
+
+@import "global";
+
+@import "navigation";
+
+@import "footer";
+
+@import "home-page";
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px 0;
+}
+    
+ nav > a {
+    color: black;
+    text-decoration: none;
+    margin-top: 25px;
+    font-weight: bold;
+ }
+    
+.bus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.btn-container {
+    .custom-layout(flex-start, flex-start);
+  }
+  
+  .new-btn {
+    .custom-btn(193px, teal, white);
+  }
+  
+  .new-btn-2 {
+    .custom-btn(193px, teal, white);
+  }
+  
+  .new-btn-3 {
+   .custom-btn(193px, teal, white);
+  }
+  
+  .custom-btn (@width: 200px, @bgColor: #FFBF27, @fontColor: black ) {
+    display: block;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 10px;
+    width: @width;
+    background-color: @bgColor;
+    color: @fontColor;
+      
+    &:hover {
+      background-color: @fontColor;
+      color: @bgColor;
+    }
+}
